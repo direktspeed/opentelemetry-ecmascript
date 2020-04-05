@@ -1,0 +1,61 @@
+{
+  "name": "opentelemetry-base",
+  "version": "0.6.0",
+  "description": "OpenTelemetry is a distributed tracing and stats collection framework.",
+  "main": "build/src/index.js",
+  "types": "build/src/index.d.ts",
+  "scripts": {
+    "bench": "node benchmark",
+    "clean": "lerna run clean",
+    "postinstall": "npm run bootstrap",
+    "precompile": "tsc --version",
+    "version:update": "lerna run version:update",
+    "compile": "lerna run compile",
+    "test": "lerna run test",
+    "test:browser": "lerna run test:browser",
+    "bootstrap": "lerna bootstrap",
+    "bump": "lerna publish",
+    "codecov": "lerna run codecov",
+    "codecov:browser": "lerna run codecov:browser",
+    "changelog": "lerna-changelog",
+    "predocs-test": "npm run docs",
+    "docs-test": "lerna run docs-test",
+    "docs": "lerna run docs",
+    "docs-deploy": "gh-pages --dist packages/opentelemetry-api/docs/out",
+    "lint": "lerna run lint",
+    "lint:fix": "lerna run lint:fix",
+    "lint:examples": "eslint ./examples/**/*.js",
+    "lint:examples:fix": "eslint ./examples/**/*.js --fix"
+  },
+  "repository": "open-telemetry/opentelemetry-js",
+  "keywords": [
+    "opentelemetry",
+    "nodejs",
+    "profiling",
+    "metrics",
+    "stats"
+  ],
+  "author": "OpenTelemetry Authors",
+  "license": "Apache-2.0",
+  "devDependencies": {
+    "@commitlint/cli": "^8.3.4",
+    "@commitlint/config-conventional": "^8.3.4",
+    "beautify-benchmark": "^0.2.4",
+    "benchmark": "^2.1.4",
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb-base": "^14.0.0",
+    "eslint-plugin-import": "^2.19.1",
+    "gh-pages": "^2.1.1",
+    "gts": "^1.1.0",
+    "husky": "^3.0.9",
+    "lerna": "^3.17.0",
+    "lerna-changelog": "^1.0.0",
+    "tslint": "^5.0.0",
+    "typescript": "^3.7.2"
+  },
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  }
+}
