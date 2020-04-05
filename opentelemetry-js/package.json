@@ -47,11 +47,11 @@
     "eslint-plugin-import": "^2.19.1",
     "gh-pages": "^2.1.1",
     "gts": "^1.1.0",
-    "husky": "^3.0.9",
+    "husky": "^4.2.3",
     "lerna": "^3.17.0",
     "lerna-changelog": "^1.0.0",
-    "tslint": "^5.0.0",
-    "typescript": "^3.7.2"
+    "tslint": "^6.1.1",
+    "typescript": "3.8.3"
   },
   "husky": {
     "hooks": {
